@@ -17,7 +17,7 @@ exports.handler = async function(event, context) {
         }
 
         // For text-only input, use the gemini-pro model
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
         const result = await model.generateContent(prompt);
         const response = await result.response;
         const text = response.text();
